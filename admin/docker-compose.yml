@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .  # The current directory as the build context
+      dockerfile: Dockerfile  # Specify the Dockerfile if it's not named 'Dockerfile'
+    image: paysgift-admin:latest  # Optional: Specify the image name and tag
+    ports:
+      - "5001:3000"  # Map host port 5000 to container port 3000
+    volumes:
+      - .:/app  # Mount the current directory to /app in the container
+      - /app/node_modules  # Prevent overwriting node_modules in the container
