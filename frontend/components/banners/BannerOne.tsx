@@ -25,7 +25,7 @@ const BannerOne = () => {
         </div>
         <div className="relative lg:w-1/2  lg:mt-0">
           <div className="rounded-xl overflow-hidden relative w-[20rem] lg:w-[30rem] h-[15rem] lg:h-[25rem] ">
-            <Image src="/images/banner/headphone.png" className="object-contain" fill alt="Electronics Banner"/>
+            <Image src="/images/banner/1.png" className="object-contain" fill alt="Electronics Banner"/>
           </div>
           <div className="absolute top-0 right-0 w-full h-full flex items-center justify-center animate-blob1">
             <div className="w-24 h-24 bg-white rounded-full opacity-50"></div>

@@ -1,28 +1,63 @@
  export const dummyCategories = [
     { 
       id: 1, 
-      name: "Smartphones", 
+      name: "Makanan & Minuman", 
       description: "Discover the latest smartphones with cutting-edge features.", 
-      image: "/images/products/galaxy-15-removebg-preview.png"
+      image: "/images/categories/makanan.jpg"
     },
     { 
       id: 2, 
-      name: "Computers", 
+      name: "Hiburan", 
       description: "Explore powerful laptops and computers for work and play.", 
-      image: "/images/products/dell-gaming-removebg-preview.png"
+      image: "/images/categories/hiburan.jpg"
     },
     { 
       id: 3, 
-      name: "Headphones", 
+      name: "Online", 
       description: "Experience immersive audio with headphones and speakers.", 
-      image: "/images/products/senheiser-removebg-preview.png"
+      image: "/images/categories/online.jpg"
     },
     { 
       id: 4, 
-      name: "Watches", 
+      name: "Fashion", 
       description: "Level up your gaming experience with consoles and accessories.", 
-      image: "/images/products/apple-watch-9-3-removebg-preview.png"
+      image: "/images/categories/fashion.jpg"
     },
-    // Add more category data as needed
+    { 
+      id: 5, 
+      name: "Kecantikan & Kesehatan", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/kecantikan.jpg"
+    },
+    { 
+      id: 6, 
+      name: "Mainan", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/mainan.jpg"
+    },
+    { 
+      id: 7, 
+      name: "Olahraga", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/sport.jpg"
+    },
+    { 
+      id: 8, 
+      name: "Rumah Tangga", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/rumahtangga.jpg"
+    },
+    { 
+      id: 9, 
+      name: "Travel", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/travel.jpg"
+    },
+    { 
+      id: 10, 
+      name: "Supermarket", 
+      description: "Level up your gaming experience with consoles and accessories.", 
+      image: "/images/categories/supermarket.jpg"
+    },
   ];
   

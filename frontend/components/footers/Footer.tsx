@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="max-w-screen-xl mx-auto p-4 md:p-8 flex md:flex-row  flex-wrap gap-4 md:gap-2 justify-between">
         <div className="flex flex-col space-y-4 mb-8 md:mb-0">
           <Logo />
-          <p>Your one-stop shop for all things electronics.</p>
+          <p>Your one-stop shop for all things coupons.</p>
           <div className="flex space-x-4">
             <Link
               href="www.facebook.com"
@@ -127,7 +127,7 @@ const Footer = () => {
       </div>
       <hr className="w-full h-[2px] bg-white" />
       <div className="text-center mt-8">
-        <p>&copy; 2024 Your Brand Name. All Rights Reserved.</p>
+        <p>&copy; 2025 Paysgift. All Rights Reserved.</p>
       </div>
     </footer>
   );

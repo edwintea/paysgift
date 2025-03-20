@@ -47,12 +47,13 @@ const ProductDetails = ({ product }: { product: Product }) => {
           </p>
         )}
       </div>
-      {/* product colors */}
+      {/* product colors 
       <ProductColorSelection
         color={selectedColor}
         setColor={setSelectedColor}
         allColors={product.color!}
       />
+      */}
 
       <div className="flex items-center gap-6">
         <div className="">

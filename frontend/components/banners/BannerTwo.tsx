@@ -42,7 +42,7 @@ const BannerTwo = () => {
           <div className="relative w-full h-full">
             <Image
               className="h-56 w-full object-contain sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src={"/images/banner/gaming-laptop.png"}
+              src={"/images/banner/2.png"}
               fill
               alt=""
             />

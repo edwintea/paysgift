@@ -15,7 +15,7 @@ const DropdownMenuComponent = () => {
     <div>
       <DropdownMenu>
         <DropdownMenuTrigger className="flex items-center gap-2 font-medium px-4 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800">
-          Pages <ChevronDown />
+          Acara <ChevronDown />
         </DropdownMenuTrigger>
         <DropdownMenuContent className="p-6 space-y-2">
           <DropdownMenuItem>

@@ -20,12 +20,12 @@ const HeaderOne = () => {
 
   const links = [
     {
-      label: "Home",
+      label: "Brand",
       link: "/",
       isActive: pathname === "/",
     },
     {
-      label: "Shop",
+      label: "Kategori",
       link: "/shop",
       isActive: pathname.startsWith("/shop"),
     }

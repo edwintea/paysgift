@@ -87,12 +87,13 @@ const ProductQuickViewModal = () => {
                     )}
                   </div>
 
-                  {/* product colors */}
+                  {/* product colors 
                   <ProductColorSelection
                     allColors={product.color!}
                     color={selectedColor}
                     setColor={setSelectedColor}
                   />
+                  */}
 
                   <div className="flex items-center gap-6 !my-4">
                     <div className="">

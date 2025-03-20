@@ -2,7 +2,7 @@ export const productsData = [
   {
     id: 1,
     name: "Apple Watch Series 9 [GPS 45mm] Smartwatch with Midnight Aluminum Case",
-    category: "Watches",
+    category: "Makanan & Minuman",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -19,21 +19,21 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         rating:4,
         author: "Shohag miah",
-        image: "/images/people/person.jpg",
+        image: "/images/products/1.jpg",
         date: new Date(),
       },
     ],
     brand: "Apple",
     color: ['white', 'gray', 'blue','silver'],
     images: [
-      "/images/products/apple-watch-9-removebg-preview.png",
-      "/images/products/apple-watch-9-3-removebg-preview.png",
+      "/images/products/1.jpg",
+      "/images/products/1.jpg",
     ],
   },
   {
     id: 2,
     name: "Apple Watch SE (2nd Gen) [GPS 44 mm] Smart Watch w/Starlight Aluminium Case & Starllight Sport Band",
-    category: "Watches",
+    category: "Hiburan",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -53,19 +53,19 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         rating:4,
         author: "Shohag miah",
-        image: "/images/people/person.jpg",
+        image: "/images/products/2.jpg",
         date: new Date(),
       },
     ],
     images: [
-      "/images/products/apple-watch-se-removebg-preview.png",
-      "/images/products/apple-watch-se-2-removebg-preview.png",
+      "/images/products/2.jpg",
+      "/images/products/2.jpg",
     ],
   },
   {
     id: 3,
     name: "FireBolt Ninja SmartWatch | lorem ipsum doller",
-    category: "Watches",
+    category: "Mainan",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -84,19 +84,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         rating:4,
         author: "Shohag miah",
-        image: "/images/people/person.jpg",
+        image: "/images/products/3.jpg",
         date: new Date(),
       },
     ],
     discount: 10,
     images: [
-      "/images/products/firebolt-ninja-removebg-preview.png"
+      "/images/products/3.jpg",
+      "/images/products/3.jpg",
     ],
   },
   {
     id:4,
     name: "Samsung Galaxy 4 Smartwatch | lorem ipsun doller",
-    category: "Watches",
+    category: "Olahraga",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -112,21 +113,21 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/4.jpg",
         date: new Date(),
       },
     ],
     brand: "none",
     color: ['white', 'gray', 'blue'],
     images: [
-      "/images/products/galaxy-watch-4-removebg-preview.png",
-      "/images/products/galaxy-watch-4-2-removebg-preview.png",
+      "/images/products/4.jpg",
+      "/images/products/4.jpg",
     ],
   },
   {
     id:5,
     name: "Asus Vivobook Pro | lorem ipsum",
-    category: "Computers",
+    category: "Olahraga",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -146,19 +147,19 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/5.jpg",
         date: new Date(),
       },
     ],
     images: [
-      "/images/products/asus-vivobook-removebg-preview.png",
-      "/images/products/asus-vivobook-2-removebg-preview.png",
+      "/images/products/5.jpg",
+      "/images/products/5.jpg",
     ],
   },
   {
     id: 6,
     name: "Dell Gaming Laptop | lorem ipsum dlllres",
-    category: "Computers",
+    category: "Mainan",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -177,19 +178,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/6.jpg",
         date: new Date(),
       },
     ],
     discount: 10,
     images: [
-      "/images/products/dell-gaming-removebg-preview.png"
+      "/images/products/6.jpg",
+      "/images/products/6.jpg",
     ],
   },
   {
     id: 7,
     name: "Lenova Powerfull Laptop | lorem ipsum dlllres",
-    category: "Computers",
+    category: "Olahraga",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -208,20 +210,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/7.jpg",
         date: new Date(),
       },
     ],
     discount: 5,
     images: [
-      "/images/products/lenova-removebg-preview.png",
-      '/images/products/lenova-2-removebg-preview.png'
+      "/images/products/7.jpg",
+      "/images/products/7.jpg",
     ],
   },
   {
     id: 8,
     name: "MSI Modern Laptop 14 | lorem ipsum dlllres",
-    category: "Computers",
+    category: "Olahraga",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -240,21 +242,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/8.jpg",
         date: new Date(),
       },
     ],
     discount: 6,
     images: [
-      "/images/products/msi-modern-14-removebg-preview.png",
-      '/images/products/msi-modern-14-2-removebg-preview.png',
-      '/images/products/msi-modern-14-3-removebg-preview.png'
+      "/images/products/8.jpg",
+      "/images/products/8.jpg",
     ],
   },
   {
     id: 9,
     name: "Sony Dynamic Wh High Headphone | lorem ipsum dlllres",
-    category: "Headphones",
+    category: "Olahraga",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -273,20 +274,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         rating:4,
         author: "Shohag miah",
-        image: "/images/people/person.jpg",
+        image: "/images/products/9.jpg",
         date: new Date(),
       },
     ],
     discount: 15,
     images: [
-      "/images/products/sony-dynamic-removebg-preview.png",
-      '/images/products/sony-dynamic-2-removebg-preview.png',
+      "/images/products/9.jpg",
+      "/images/products/9.jpg",
     ],
   },
   {
     id: 10,
     name: "Sony Normal Wh High Headphone | lorem ipsum dlllres",
-    category: "Headphones",
+    category: "Supermarket",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -305,19 +306,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/10.jpg",
         date: new Date(),
       },
     ],
     discount: 5,
     images: [
-      "/images/products/song-wh-removebg-preview.png",
+      "/images/products/10.jpg",
+      "/images/products/10.jpg",
     ],
   },
   {
     id: 11,
     name: "Seiheimer 12 High Headphone | lorem ipsum dlllres",
-    category: "Headphones",
+    category: "Mainan",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -336,19 +338,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/11.jpg",
         date: new Date(),
       },
     ],
     discount: 12,
     images: [
-      "/images/products/senheiser-removebg-preview.png",
+      "/images/products/11.jpg",
+      "/images/products/11.jpg",
     ],
   },
   {
     id: 12,
     name: "Prothonus Noise Cancalling Headphone | lorem ipsum dlllres",
-    category: "Headphones",
+    category: "Mainan",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -367,19 +370,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/12.jpg",
         date: new Date(),
       },
     ],
     discount: 12,
     images: [
-      "/images/products/prothonics-removebg-preview.png",
+      "/images/products/12.jpg",
+      "/images/products/12.jpg",
     ],
   },
   {
     id: 13,
     name: " Peco M6 Smartphone | lorem ipsum dlllres",
-    category: "Smartphones",
+    category: "Supermarket",
     description:
     "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -398,20 +402,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/12.jpg",
         date: new Date(),
       },
     ],
     discount: 12,
     images: [
-      "/images/products/peco-m6-removebg-preview.png",
-      '/images/products/peco-m6-2-removebg-preview.png'
+      "/images/products/13.jpg",
+      "/images/products/13.jpg",
     ],
   },
   {
     id: 14,
     name: "Realme C 13 Smartphone | lorem ipsum doller",
-    category: "Smartphones",
+    category: "Supermarket",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -430,20 +434,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/14.jpg",
         date: new Date(),
       },
     ],
     discount: 12,
     images: [
-      "/images/products/readme-13-c-removebg-preview.png",
-      '/images/products/readme-13c-2-removebg-preview.png'
+      "/images/products/14.jpg",
+      "/images/products/14.jpg",
     ],
   },
   {
     id: 15,
     name: "Lava Agni Smartphone | lorem ipsum doller",
-    category: "Smartphones",
+    category: "Supermarket",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -462,19 +466,20 @@ export const productsData = [
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
         rating:4,
-        image: "/images/people/person.jpg",
+        image: "/images/products/15.jpg",
         date: new Date(),
       },
     ],
     discount: 5,
     images: [
-      "/images/products/lava_agni-removebg-preview.png",
+      "/images/products/15.jpg",
+      "/images/products/15.jpg",
     ],
   },
   {
     id: 16,
     name: "Samsung Galaxy 15 Pro Smartphone | lorem ipsum doller",
-    category: "Smartphones",
+    category: "Fashion",
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
     aboutItem: [
@@ -492,14 +497,143 @@ export const productsData = [
       {
         content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
         author: "Shohag miah",
-        image: "/images/people/person.jpg",
+        image: "/images/products/16.jpg",
         rating:4,
         date: new Date(),
       },
     ],
     discount: 5,
     images: [
-      "/images/products/galaxy-15-removebg-preview.png",
+      "/images/products/16.jpg",
+      "/images/products/16.jpg",
+    ],
+  },
+  {
+    id: 17,
+    name: "Samsung Galaxy 15 Pro Smartphone | lorem ipsum doller",
+    category: "Online",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
+    aboutItem: [
+      "Tangent Impulse Open-ear wireless headphones are more comfortable to wear for long hours, as they do not create any pressure in the ears | Ultra-Lightweight, just weighing 16 gms.",
+      "SafeBeats Design, these Bluetooth earphones rest gently on the outer ear, relieving pressure & preventing damage to the eardrums | Beware of your surroundings while Listening to Music",
+      "Large 13mm Dynamic Drivers for Immersive Stereo Sound Experience | Enjoy music for up to 10 hours on a single charge",
+      "Bluetooth V5.3 with 1-Step Pairing, 10 meters Strong Wireless Connectivity & Dual-Device Pairing | Access Your Phone`s Voice Assistant Instantly thru Tangent Impulse | Touch Control in Right Earbud",
+    ],
+    price: 800,
+    rating: 4.9,
+    brand: "Samsung",
+    color: ['black','gray', 'yellow','blue'],
+    stockItems: 0,
+    reviews: [
+      {
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
+        author: "Shohag miah",
+        image: "/images/products/17.jpg",
+        rating:4,
+        date: new Date(),
+      },
+    ],
+    discount: 5,
+    images: [
+      "/images/products/17.jpg",
+      "/images/products/17.jpg",
+    ],
+  },
+  {
+    id: 18,
+    name: "Samsung Galaxy 15 Pro Smartphone | lorem ipsum doller",
+    category: "Kecantikan & Kesehatan",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
+    aboutItem: [
+      "Tangent Impulse Open-ear wireless headphones are more comfortable to wear for long hours, as they do not create any pressure in the ears | Ultra-Lightweight, just weighing 16 gms.",
+      "SafeBeats Design, these Bluetooth earphones rest gently on the outer ear, relieving pressure & preventing damage to the eardrums | Beware of your surroundings while Listening to Music",
+      "Large 13mm Dynamic Drivers for Immersive Stereo Sound Experience | Enjoy music for up to 10 hours on a single charge",
+      "Bluetooth V5.3 with 1-Step Pairing, 10 meters Strong Wireless Connectivity & Dual-Device Pairing | Access Your Phone`s Voice Assistant Instantly thru Tangent Impulse | Touch Control in Right Earbud",
+    ],
+    price: 800,
+    rating: 4.9,
+    brand: "Samsung",
+    color: ['black','gray', 'yellow','blue'],
+    stockItems: 0,
+    reviews: [
+      {
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
+        author: "Shohag miah",
+        image: "/images/products/18.jpg",
+        rating:4,
+        date: new Date(),
+      },
+    ],
+    discount: 5,
+    images: [
+      "/images/products/18.jpg",
+      "/images/products/18.jpg",
+    ],
+  },
+  {
+    id: 19,
+    name: "Samsung Galaxy 15 Pro Smartphone | lorem ipsum doller",
+    category: "Rumah Tangga",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
+    aboutItem: [
+      "Tangent Impulse Open-ear wireless headphones are more comfortable to wear for long hours, as they do not create any pressure in the ears | Ultra-Lightweight, just weighing 16 gms.",
+      "SafeBeats Design, these Bluetooth earphones rest gently on the outer ear, relieving pressure & preventing damage to the eardrums | Beware of your surroundings while Listening to Music",
+      "Large 13mm Dynamic Drivers for Immersive Stereo Sound Experience | Enjoy music for up to 10 hours on a single charge",
+      "Bluetooth V5.3 with 1-Step Pairing, 10 meters Strong Wireless Connectivity & Dual-Device Pairing | Access Your Phone`s Voice Assistant Instantly thru Tangent Impulse | Touch Control in Right Earbud",
+    ],
+    price: 800,
+    rating: 4.9,
+    brand: "Samsung",
+    color: ['black','gray', 'yellow','blue'],
+    stockItems: 0,
+    reviews: [
+      {
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
+        author: "Shohag miah",
+        image: "/images/products/19.jpg",
+        rating:4,
+        date: new Date(),
+      },
+    ],
+    discount: 5,
+    images: [
+      "/images/products/19.jpg",
+      "/images/products/19.jpg",
+    ],
+  },
+  {
+    id: 20,
+    name: "Samsung Galaxy 15 Pro Smartphone | lorem ipsum doller",
+    category: "Travel",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium quas reiciendis quae, enim nesciunt, illo sit ea aspernatur quo perferendis! Cumque fuga impedit corrupti!",
+    aboutItem: [
+      "Tangent Impulse Open-ear wireless headphones are more comfortable to wear for long hours, as they do not create any pressure in the ears | Ultra-Lightweight, just weighing 16 gms.",
+      "SafeBeats Design, these Bluetooth earphones rest gently on the outer ear, relieving pressure & preventing damage to the eardrums | Beware of your surroundings while Listening to Music",
+      "Large 13mm Dynamic Drivers for Immersive Stereo Sound Experience | Enjoy music for up to 10 hours on a single charge",
+      "Bluetooth V5.3 with 1-Step Pairing, 10 meters Strong Wireless Connectivity & Dual-Device Pairing | Access Your Phone`s Voice Assistant Instantly thru Tangent Impulse | Touch Control in Right Earbud",
+    ],
+    price: 800,
+    rating: 4.9,
+    brand: "Samsung",
+    color: ['black','gray', 'yellow','blue'],
+    stockItems: 0,
+    reviews: [
+      {
+        content: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio voluptatem aliquam reprehenderit debitis quidem accusantium",
+        author: "Shohag miah",
+        image: "/images/products/19.jpg",
+        rating:4,
+        date: new Date(),
+      },
+    ],
+    discount: 5,
+    images: [
+      "/images/products/19.jpg",
+      "/images/products/19.jpg",
     ],
   },
 ];

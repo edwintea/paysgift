@@ -18,15 +18,15 @@ const CategoriesCollection = () => {
   };
 
   const watches = productsData.filter(
-    (item) => item.category.toLowerCase() === "watches"
+    (item) => item.category.toLowerCase() === "mainan"
   );
 
   const headphones = productsData.filter(
-    (item) => item.category.toLowerCase() === "headphones"
+    (item) => item.category.toLowerCase() === "olahraga"
   );
 
   const computers = productsData.filter(
-    (item) => item.category.toLowerCase() === "computers"
+    (item) => item.category.toLowerCase() === "supermarket"
   );
 
   return (

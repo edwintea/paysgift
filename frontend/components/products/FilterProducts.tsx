@@ -143,6 +143,25 @@ const FilterProducts = () => {
         </div>
       </div>
 
+      {/* filter by Brand name */}
+      <div>
+        <h3 className="text-lg font-medium my-2">By Brands</h3>
+        <div className="flex items-center justify-start gap-2 flex-wrap">
+          {brandsData.map((brand) => (
+            <p
+              onClick={() => handleBrandSelection(brand)}
+              className={cn(
+                "px-4 py-1 rounded-full bg-slate-200 dark:bg-slate-700 cursor-pointer",
+                selectedBrand === brand && "bg-blue-400 dark:bg-blue-700"
+              )}
+              key={brand}
+            >
+              {brand}
+            </p>
+          ))}
+        </div>
+      </div>
+      
       {/* filter by category */}
       <div>
         <h3 className="text-lg font-medium my-2">By Categories</h3>
@@ -163,7 +182,7 @@ const FilterProducts = () => {
         </div>
       </div>
 
-      {/* filter by Colors */}
+      {/* filter by Colors 
       <div>
         <h3 className="text-lg font-medium my-2">By Colors</h3>
         <div className="flex items-center justify-start gap-2 flex-wrap">
@@ -185,25 +204,9 @@ const FilterProducts = () => {
           ))}
         </div>
       </div>
+      */}
 
-      {/* filter by Brand name */}
-      <div>
-        <h3 className="text-lg font-medium my-2">By Brands</h3>
-        <div className="flex items-center justify-start gap-2 flex-wrap">
-          {brandsData.map((brand) => (
-            <p
-              onClick={() => handleBrandSelection(brand)}
-              className={cn(
-                "px-4 py-1 rounded-full bg-slate-200 dark:bg-slate-700 cursor-pointer",
-                selectedBrand === brand && "bg-blue-400 dark:bg-blue-700"
-              )}
-              key={brand}
-            >
-              {brand}
-            </p>
-          ))}
-        </div>
-      </div>
+      
       <div>
         <Button onClick={clearFilter} variant={"outline"} className="w-full">
           Clear Filter
