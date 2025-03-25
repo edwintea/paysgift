@@ -1,0 +1,36 @@
+entity PaymentTransactionRecurring {
+  paymentProviderId Integer,
+  paymentListId Integer,
+  paymentTransactionId Integer,
+  customerId String,
+  paymentMethodId String,
+  recurringPlanId String,
+  cycleId String,
+  scheduleId String,
+  actionId String,
+  status Boolean,
+  cycle Integer,
+  amount BigDecimal,
+  tax BigDecimal,
+  paymentCharge BigDecimal,
+  total BigDecimal,
+  datetimePaid Instant,
+  totalRetry Integer required,
+  attemptRetry Integer required,
+  datetimeLastRetry Instant,
+  sendCallback Boolean required,
+  sendCallbackAttempt Integer required,
+  paymentSchedule Instant,
+  paymentLink String,
+  referenceId String,
+  dataObj TextBlob,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentTransactionRecurring{paymentProviderId} to PaymentProvider,
+  PaymentTransactionRecurring{paymentListId} to PaymentList,
+  PaymentTransactionRecurring{paymentTransactionId} to PaymentTransaction
+}

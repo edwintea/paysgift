@@ -1,0 +1,12 @@
+entity PaysgiftPromoDetail {
+  paysgiftPromoId Integer required,
+  voucherId Integer required,
+  createdOn Instant required,
+  updatedOn Instant required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaysgiftPromoDetail{paysgiftPromoId} to PaysgiftPromo,
+  PaysgiftPromoDetail{voucherId} to Voucher
+}

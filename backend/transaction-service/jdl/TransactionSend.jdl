@@ -1,0 +1,48 @@
+entity TransactionSend {
+  transactionId Integer required,
+  code TextBlob required,
+  pin String required,
+  stickerId Integer required,
+  senderName String required,
+  message TextBlob required,
+  sendType Boolean required,
+  contactType Boolean required,
+  recepientName String required,
+  recepientContact String,
+  recepientContactHash String required,
+  isImmediately Boolean required,
+  sendSchedule Instant,
+  addressLabel String,
+  countryId Integer required,
+  provinceId Integer,
+  cityId Integer,
+  districtId Integer,
+  villageId Integer,
+  zipcode String,
+  address String,
+  courierNote String,
+  longitude String,
+  latitude String,
+  referenceId String,
+  sendBy String required,
+  deliveryPrice BigDecimal required,
+  deliveryPriceUsd BigDecimal required,
+  discDeliveryPrice BigDecimal required,
+  discDeliveryPriceUsd BigDecimal required,
+  totalDeliveryPrice BigDecimal required,
+  totalDeliveryPriceUsd BigDecimal required,
+  statusDelivery Boolean required,
+  statusReason TextBlob,
+  blibliPackageId String,
+  tryOpen Boolean required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  TransactionSend{transactionId} to Transaction,
+  TransactionSend{countryId} to Country,
+  TransactionSend{provinceId} to Province,
+  TransactionSend{cityId} to City,
+  TransactionSend{districtId} to District,
+  TransactionSend{villageId} to Village
+}

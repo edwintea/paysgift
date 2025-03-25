@@ -1,0 +1,16 @@
+entity ProductFavourite {
+  productId Integer required,
+  customerId Integer required,
+  countryId Integer required,
+  channelId Integer required,
+  brandId Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  ProductFavourite{productId} to Product,
+  ProductFavourite{customerId} to Customer,
+  ProductFavourite{countryId} to Country,
+  ProductFavourite{channelId} to Channel,
+  ProductFavourite{brandId} to Brand
+}

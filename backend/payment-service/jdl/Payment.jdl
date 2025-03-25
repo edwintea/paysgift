@@ -1,0 +1,20 @@
+entity Payment {
+  paymentTypeId Integer required,
+  countryId Integer required,
+  name String required,
+  description String required,
+  descriptionEn String required,
+  logo String required,
+  isActive Boolean required,
+  isDelete Boolean required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  Payment{paymentTypeId} to PaymentType,
+  Payment{countryId} to LocationCountry
+}

@@ -1,0 +1,12 @@
+entity TransactionLog {
+  transactionId Integer required,
+  title String required,
+  info TextBlob required,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  TransactionLog{transactionId} to Transaction
+}

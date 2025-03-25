@@ -1,0 +1,23 @@
+entity DanaOrder {
+  version String,
+  function String,
+  reqTime Instant,
+  respTime Instant,
+  isActive Instant,
+  reqMsgId String,
+  requestId String,
+  orderId String,
+  code String,
+  status String,
+  message String,
+  productId String,
+  issuanceId String,
+  voucherCode String,
+  voucherPin String,
+  issuanceDate Instant,
+  expiredDate Instant,
+  extendInfo TextBlob,
+  sendEmailNotif Instant,
+  createdOn Instant,
+  updatedOn Instant
+}

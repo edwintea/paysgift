@@ -1,0 +1,46 @@
+entity PaymentTransaction {
+  status Integer,
+  paymentProviderId Integer required,
+  paymentListId Integer,
+  orderId Long,
+  orderNo String,
+  invoiceId String,
+  referenceId String,
+  clientId Long,
+  amount BigDecimal,
+  tax BigDecimal required,
+  paymentCharge BigDecimal,
+  total BigDecimal,
+  expiryRequest Integer,
+  expiryTime Instant,
+  expiryLink Instant,
+  processExpired Boolean required,
+  paymentCode String,
+  paymentDeeplink String,
+  paymentObj TextBlob,
+  notes TextBlob,
+  sgiUid String,
+  customerName String,
+  customerEmail String,
+  customerMobileNumber String,
+  isSubscription Boolean,
+  totalRecurring Integer,
+  retryTotal Integer,
+  retryInterval Integer,
+  cycleActive Integer,
+  mode Integer,
+  modeInterval Integer,
+  nextPayment Instant,
+  sendCallback Boolean required,
+  sendCallbackAttempt Integer required,
+  sendEmail Boolean required,
+  sendEmailAttempt Integer,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentTransaction{paymentProviderId} to PaymentProvider,
+  PaymentTransaction{paymentListId} to PaymentList
+}

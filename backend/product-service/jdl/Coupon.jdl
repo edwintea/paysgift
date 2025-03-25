@@ -1,0 +1,20 @@
+entity Coupon {
+  countryId Integer required,
+  channelId Integer required,
+  brandId Integer required,
+  name String,
+  tnc TextBlob,
+  isActive Boolean required,
+  isDelete Boolean required,
+  createdOn Instant,
+  createdBy Integer,
+  updatedOn Instant,
+  updatedBy Integer
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  Coupon{countryId} to Country,
+  Coupon{channelId} to Channel,
+  Coupon{brandId} to Brand
+}

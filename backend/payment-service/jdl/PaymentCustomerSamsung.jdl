@@ -1,0 +1,8 @@
+entity PaymentCustomerSamsung {
+  sgiUid String required,
+  name String,
+  email String,
+  mobileNumber String,
+  createdOn Instant,
+  updatedOn Instant
+}

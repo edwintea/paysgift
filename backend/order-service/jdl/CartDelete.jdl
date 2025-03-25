@@ -1,0 +1,25 @@
+entity CartDelete {
+  transactionDetailId Integer required,
+  customerId Integer required,
+  countryId Integer required,
+  clientId Integer required,
+  channelId Integer required,
+  brandId Integer required,
+  productId Integer required,
+  qty Integer required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  CartDelete{transactionDetailId} to TransactionDetail,
+  CartDelete{customerId} to Customer,
+  CartDelete{productId} to Product,
+  CartDelete{countryId} to LocationCountry,
+  CartDelete{clientId} to Client,
+  CartDelete{channelId} to Channel,
+  CartDelete{brandId} to Brand
+}

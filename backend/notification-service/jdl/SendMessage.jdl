@@ -1,0 +1,12 @@
+entity SendMessage {
+  phoneNumber String required,
+  message TextBlob required,
+  dateTimeEntry Instant,
+  dateTimeSend Instant,
+  status Boolean required,
+  response TextBlob,
+  messageId String required,
+  statusMessage Integer required,
+  tableRelation String required,
+  tableId TextBlob required
+}

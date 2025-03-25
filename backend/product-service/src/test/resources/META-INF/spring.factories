@@ -1,0 +1,7 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    com.paysgift.productservice.config.\
+    SqlTestContainersSpringContextCustomizerFactory,com.paysgift.productservice.\
+    config.TestContainersSpringContextCustomizerFactory,com.paysgift.\
+    productservice.config.RedisTestContainersSpringContextCustomizerFactory,com.\
+    paysgift.productservice.config.\
+    KafkaTestContainersSpringContextCustomizerFactory

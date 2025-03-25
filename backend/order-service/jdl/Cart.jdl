@@ -1,0 +1,23 @@
+entity Cart {
+  customerId Integer required,
+  countryId Integer required,
+  clientId Integer required,
+  channelId Integer required,
+  brandId Integer required,
+  productId Integer required,
+  qty Integer required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  Cart{customerId} to Customer,
+  Cart{productId} to Product,
+  Cart{countryId} to LocationCountry,
+  Cart{clientId} to Client,
+  Cart{channelId} to Channel,
+  Cart{brandId} to Brand
+}

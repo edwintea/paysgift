@@ -1,0 +1,13 @@
+entity PaymentTransactionCampaign {
+  paymentTransactionId Integer,
+  cycle Integer required,
+  hitDatetime Instant required,
+  hitStatus Boolean,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentTransactionCampaign{paymentTransactionId} to PaymentTransaction
+}

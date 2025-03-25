@@ -1,0 +1,14 @@
+entity ProductOccasion {
+  productId Integer required,
+  occasionId Integer required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  ProductOccasion{productId} to Product,
+  ProductOccasion{occasionId} to Occasion
+}

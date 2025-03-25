@@ -1,0 +1,22 @@
+entity SendEmail {
+  mailTo TextBlob required,
+  mailToName TextBlob required,
+  subject String required,
+  body TextBlob required,
+  attached1 String,
+  attachedUnlink1 Boolean,
+  attached2 String,
+  attachedUnlink2 Boolean,
+  attached3 String,
+  attachedUnlink3 Boolean,
+  dateTimeEntry Instant,
+  dateTimeSend Instant,
+  mailFrom String required,
+  mailFromName String required,
+  status Boolean required,
+  info TextBlob,
+  mailCc TextBlob,
+  mailCcName TextBlob,
+  tableRelation String required,
+  tableId TextBlob
+}

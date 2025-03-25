@@ -1,0 +1,18 @@
+entity PaymentTransactionRetrying {
+  paymentTransactionRecurringId Integer required,
+  status Integer required,
+  attemptRetry Integer,
+  datetimeRetry Instant,
+  datetimeNextRetry Instant,
+  sendCallback Boolean required,
+  sendCallbackAttempt Integer required,
+  sendEmail Boolean required,
+  sendEmailAttempt Integer,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentTransactionRetrying{paymentTransactionRecurringId} to PaymentTransactionRecurring
+}

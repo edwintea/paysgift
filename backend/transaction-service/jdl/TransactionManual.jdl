@@ -1,0 +1,13 @@
+entity TransactionManual {
+  transactionId Integer required,
+  notes TextBlob,
+  createdOn Instant,
+  createdBy Integer,
+  updatedOn Instant,
+  updatedBy Integer
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  TransactionManual{transactionId} to Transaction
+}

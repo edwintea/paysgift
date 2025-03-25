@@ -1,0 +1,25 @@
+entity Discount {
+  countryId Integer required,
+  clientId Integer required,
+  channelId Integer required,
+  brandId Integer required,
+  name String required,
+  isAllVoucher Boolean required,
+  priority Integer required,
+  startDate Instant required,
+  endDate Instant required,
+  isActive Boolean required,
+  isDelete Boolean required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  Discount{countryId} to Country,
+  Discount{clientId} to Client,
+  Discount{channelId} to Channel,
+  Discount{brandId} to Brand
+}

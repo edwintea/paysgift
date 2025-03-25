@@ -1,0 +1,13 @@
+entity TransactionDownload {
+  transactionId Integer,
+  customerId Integer required,
+  reason String,
+  createdOn Instant required,
+  updatedOn Instant required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  TransactionDownload{transactionId} to Transaction,
+  TransactionDownload{customerId} to Customer
+}

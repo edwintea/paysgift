@@ -1,0 +1,20 @@
+entity PaymentList {
+  status Integer,
+  type Integer,
+  code String required,
+  name String,
+  paymentProviderId Integer,
+  paymentFeePercentage BigDecimal,
+  paymentFeeNominal BigDecimal,
+  paymentNotes String,
+  imageUrl String,
+  howToPay TextBlob,
+  note TextBlob,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentList{paymentProviderId} to PaymentProvider
+}

@@ -1,0 +1,23 @@
+entity User {
+  groupId Long required,
+  countryId Long required,
+  isActive Boolean required,
+  image String,
+  username String required,
+  password String required,
+  fullname String required,
+  email String required,
+  mobileNumber String required,
+  isAdmin Boolean,
+  isInternal Boolean,
+  byLocation Integer,
+  location String,
+  google2faSecret String,
+  otpNumber String,
+  otpStatus Boolean ,
+  otpExpiredDate Instant,
+  lastLoginAt Instant,
+  createdAt Instant,
+  updatedAt Instant,
+  is2fa Boolean
+}

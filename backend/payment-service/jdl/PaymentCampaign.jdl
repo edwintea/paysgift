@@ -1,0 +1,13 @@
+entity PaymentCampaign {
+  campaignId Integer required,
+  freeMonth Integer required,
+  validFrom Instant required,
+  validTo Instant required,
+  createdOn Instant,
+  updatedOn Instant
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  PaymentCampaign{campaignId} to Campaign
+}

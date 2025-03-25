@@ -1,0 +1,14 @@
+entity EvoucherDelivery {
+  countryId Integer,
+  type Boolean required,
+  price BigDecimal required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  EvoucherDelivery{countryId} to Country
+}

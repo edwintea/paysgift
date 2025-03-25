@@ -1,0 +1,14 @@
+entity ProductCategory {
+  productId Integer required,
+  categoryId Integer required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  ProductCategory{productId} to Product,
+  ProductCategory{categoryId} to Category
+}

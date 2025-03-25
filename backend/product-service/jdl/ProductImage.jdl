@@ -1,0 +1,20 @@
+entity ProductImage {
+  productId Integer required,
+  clientId Integer required,
+  channelId Integer required,
+  brandId Integer required,
+  image String required,
+  priority Integer required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  ProductImage{productId} to Product,
+  ProductImage{clientId} to Client,
+  ProductImage{channelId} to Channel,
+  ProductImage{brandId} to Brand
+}

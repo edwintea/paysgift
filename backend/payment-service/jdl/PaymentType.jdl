@@ -1,0 +1,11 @@
+entity PaymentType {
+  name String required,
+  description TextBlob required,
+  descriptionEn TextBlob required,
+  isActive Boolean required,
+  isDelete Boolean required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}

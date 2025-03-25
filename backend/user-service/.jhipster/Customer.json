@@ -1,0 +1,104 @@
+{
+  "annotations": {
+    "changelogDate": "20250324094047"
+  },
+  "clientRootFolder": "userService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "groupId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "countryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "username",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "password",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "fullname",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "email",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mobileNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isAdmin",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isInternal",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "byLocation",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "location",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "google2faSecret",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otpNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "otpStatus",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "otpExpiredDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastLoginAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "is2fa",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "userService",
+  "name": "Customer",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

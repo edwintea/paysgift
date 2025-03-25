@@ -1,0 +1,27 @@
+entity CouponCode {
+  couponId Integer required,
+  productId Integer required,
+  code String required,
+  useValidity Boolean required,
+  validFrom Instant required,
+  validTo Instant required,
+  count Integer required,
+  countRemaining Integer required,
+  uniquePerCustomer Boolean required,
+  subtotal TextBlob required,
+  discountType Boolean required,
+  discountAmount BigDecimal required,
+  discountMaxAmount BigDecimal required,
+  isActive Boolean required,
+  isDelete Boolean required,
+  createdOn Instant,
+  createdBy Integer required,
+  updatedOn Instant,
+  updatedBy Integer required
+}
+
+// You can define relationships here if needed
+relationship ManyToOne {
+  CouponCode{couponId} to Coupon,
+  CouponCode{productId} to Product
+}
