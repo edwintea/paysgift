@@ -1,0 +1,229 @@
+1. Persiapan Lingkungan
+Sebelum memulai, pastikan Anda telah menginstal dan mengonfigurasi alat berikut:
+
+Minikube: Untuk menjalankan cluster Kubernetes lokal.
+kubectl: Alat baris perintah untuk berinteraksi dengan Kubernetes.
+Docker: Untuk membangun image aplikasi Anda.
+2. Buat Dockerfile untuk Aplikasi Spring Boot
+# Menggunakan image Java sebagai base image
+FROM openjdk:11-jre-slim
+
+# Menentukan direktori kerja
+WORKDIR /app
+
+# Menyalin file jar aplikasi ke dalam image
+COPY target/your-app.jar app.jar
+
+# Menjalankan aplikasi
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+Gantilah your-app.jar dengan nama file jar aplikasi Anda.
+3. Bangun Image Docker
+Jalankan perintah berikut di terminal untuk membangun image Docker:\
+docker build -t your-app-image .
+
+Gantilah your-app-image dengan nama yang Anda inginkan untuk image Anda.
+
+4. Konfigurasi Kubernetes
+Buat file konfigurasi Kubernetes untuk aplikasi Anda dan dependensinya. Anda bisa membuat file YAML untuk setiap layanan.
+
+a. MySQL Deployment dan Service
+Buat file mysql-deployment.yaml:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.7
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: rootpassword
+        - name: MYSQL_DATABASE
+          value: your_database
+        ports:
+        - containerPort: 3306
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: mysql
+	
+
+b. Kafka Deployment dan Service
+Buat file kafka-deployment.yaml:
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kafka
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kafka
+  template:
+    metadata:
+      labels:
+        app: kafka
+    spec:
+      containers:
+      - name: kafka
+        image: wurstmeister/kafka:latest
+        env:
+        - name: KAFKA_ADVERTISED_LISTENERS
+          value: INSIDE://kafka:9092
+        - name: KAFKA_LISTENER_SECURITY_PROTOCOL_MAP
+          value: INSIDE:PLAINTEXT
+        - name: KAFKA_LISTENERS
+          value: INSIDE://0.0.0.0:9092
+        ports:
+        - containerPort: 9092
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kafka
+spec:
+  ports:
+  - port: 9092
+  selector:
+    app: kafka
+	
+c. Redis Deployment dan Service
+Buat file redis-deployment.yaml:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+      - name: redis
+        image: redis:latest
+        ports:
+        - containerPort: 6379
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+spec:
+  ports:
+  - port: 6379
+  selector:
+    app: redis
+
+5. Deploy ke Minikube
+Jalankan perintah berikut untuk mendeploy semua layanan ke Minikube:
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f kafka-deployment.yaml
+kubectl apply -f redis-deployment.yaml
+
+6. Deploy Aplikasi Spring Boot
+Buat file app-deployment.yaml untuk aplikasi Spring Boot Anda:
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: your-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: your-app
+  template:
+    metadata:
+      labels:
+        app: your-app
+    spec:
+      containers:
+      - name: your-app
+        image: your-app-image:latest  # Gantilah dengan nama image yang Anda buat sebelumnya
+        env:
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:mysql://mysql:3306/your_database  # Gantilah dengan nama database Anda
+        - name: SPRING_DATASOURCE_USERNAME
+          value: root
+        - name: SPRING_DATASOURCE_PASSWORD
+          value: rootpassword
+        - name: SPRING_KAFKA_BOOTSTRAP_SERVERS
+          value: kafka:9092
+        - name: SPRING_REDIS_HOST
+          value: redis
+        ports:
+        - containerPort: 8080  # Gantilah dengan port aplikasi Anda
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: your-app
+spec:
+  type: NodePort
+  ports:
+  - port: 8080  # Gantilah dengan port aplikasi Anda
+    targetPort: 8080
+    nodePort: 30000  # Gantilah dengan port yang Anda inginkan
+  selector:
+    app: your-app
+
+
+7. Deploy Aplikasi ke Minikube
+Setelah Anda membuat file app-deployment.yaml, jalankan perintah berikut untuk mendeploy aplikasi Spring Boot Anda ke Minikube:
+kubectl apply -f app-deployment.yaml
+
+8. Verifikasi Deployment
+Setelah semua layanan dideploy, Anda dapat memverifikasi status deployment dengan perintah berikut:
+kubectl get pods
+kubectl get services
+
+9. Akses Aplikasi
+Karena kita menggunakan NodePort untuk service aplikasi, Anda dapat mengakses aplikasi Spring Boot Anda melalui alamat IP Minikube dan port yang telah ditentukan. Untuk mendapatkan alamat IP Minikube, jalankan:
+
+minikube ip
+
+Kemudian, akses aplikasi Anda di browser atau menggunakan alat seperti Postman dengan URL:
+http://<minikube-ip>:30000
+
+Gantilah <minikube-ip> dengan alamat IP yang Anda dapatkan dari perintah di atas.
+
+10. Monitoring dan Debugging
+Jika Anda mengalami masalah, Anda dapat memeriksa log dari pod tertentu dengan perintah:
+
+kubectl logs <pod-name>
+Gantilah <pod-name> dengan nama pod yang ingin Anda periksa.
+
+11. Cleanup
+Jika Anda ingin menghapus semua resource yang telah Anda buat, Anda dapat menggunakan perintah berikut:
+
+kubectl delete -f mysql-deployment.yaml
+kubectl delete -f kafka-deployment.yaml
+kubectl delete -f redis-deployment.yaml
+kubectl delete -f app-deployment.yaml
+
+Kesimpulan
+Anda sekarang telah berhasil mendeploy aplikasi Spring Boot dengan dependensi MySQL, Kafka, dan Redis ke Minikube. Pastikan untuk menyesuaikan konfigurasi sesuai dengan kebutuhan spesifik aplikasi Anda. Jika Anda memiliki pertanyaan lebih lanjut atau memerlukan bantuan tambahan, jangan ragu untuk bertanya!
+

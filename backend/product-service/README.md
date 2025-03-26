@@ -4,8 +4,6 @@ This application was generated using JHipster 8.9.0, you can find documentation 
 
 This is a "microservice" application intended to be part of a microservice architecture, please refer to the [Doing microservices with JHipster][] page of the documentation for more information.
 
-This application is configured for Service Discovery and Configuration with Consul. On launch, it will refuse to start if it is not able to connect to Consul at [http://localhost:8500](http://localhost:8500). For more information, read our documentation on [Service Discovery and Configuration with Consul][].
-
 ## Project Structure
 
 Node is required for generation and recommended for development. `package.json` is always generated for a better development experience with prettier, commit hooks, scripts and so on.
@@ -73,16 +71,6 @@ To launch your application's tests, run:
 
 ```
 ./mvnw verify
-```
-
-### Gatling
-
-Performance tests are run by [Gatling][] and written in Scala. They're located in [src/test/java/gatling/simulations](src/test/java/gatling/simulations).
-
-You can execute all Gatling tests with
-
-```
-./mvnw gatling:test
 ```
 
 ## Others
@@ -175,7 +163,6 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [JHipster 8.9.0 archive]: https://www.jhipster.tech/documentation-archive/v8.9.0
 [Doing microservices with JHipster]: https://www.jhipster.tech/documentation-archive/v8.9.0/microservices-architecture/
 [Using JHipster in development]: https://www.jhipster.tech/documentation-archive/v8.9.0/development/
-[Service Discovery and Configuration with Consul]: https://www.jhipster.tech/documentation-archive/v8.9.0/microservices-architecture/#consul
 [Using Docker and Docker-Compose]: https://www.jhipster.tech/documentation-archive/v8.9.0/docker-compose
 [Using JHipster in production]: https://www.jhipster.tech/documentation-archive/v8.9.0/production/
 [Running tests page]: https://www.jhipster.tech/documentation-archive/v8.9.0/running-tests/
@@ -183,4 +170,3 @@ To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`)
 [Setting up Continuous Integration]: https://www.jhipster.tech/documentation-archive/v8.9.0/setting-up-ci/
 [Node.js]: https://nodejs.org/
 [NPM]: https://www.npmjs.com/
-[Gatling]: https://gatling.io/

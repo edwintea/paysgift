@@ -1,0 +1,4 @@
+org.springframework.test.context.ContextCustomizerFactory = \
+    com.paysgift.transaction.config.\
+    SqlTestContainersSpringContextCustomizerFactory,com.paysgift.transaction.\
+    config.TestContainersSpringContextCustomizerFactory

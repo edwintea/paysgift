@@ -2,8 +2,6 @@ package com.paysgift.productservice;
 
 import com.paysgift.productservice.config.AsyncSyncConfiguration;
 import com.paysgift.productservice.config.EmbeddedElasticsearch;
-import com.paysgift.productservice.config.EmbeddedKafka;
-import com.paysgift.productservice.config.EmbeddedRedis;
 import com.paysgift.productservice.config.EmbeddedSQL;
 import com.paysgift.productservice.config.JacksonConfiguration;
 import java.lang.annotation.ElementType;
@@ -18,9 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @SpringBootTest(classes = { ProductServiceApp.class, JacksonConfiguration.class, AsyncSyncConfiguration.class })
-@EmbeddedRedis
 @EmbeddedElasticsearch
 @EmbeddedSQL
-@EmbeddedKafka
 public @interface IntegrationTest {
 }

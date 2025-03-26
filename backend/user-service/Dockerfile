@@ -13,7 +13,7 @@ WORKDIR /app
 COPY .env .env
 
 # Copy the WAR file into the container
-COPY target/userservice-0.0.1.war app.war
+COPY target/user-service-0.0.1.war app.war
 
 # Command to run the application
 CMD ["java", "-jar", "app.war"]

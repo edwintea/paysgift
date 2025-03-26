@@ -15,10 +15,10 @@
 
 logging:
   level:
-    ROOT: DEBUG
-    tech.jhipster: DEBUG
-    org.hibernate.SQL: DEBUG
-    com.paysgift.productservice: DEBUG
+    ROOT: ${APP_LOG_LEVEL:INFO}
+    tech.jhipster: ${APP_LOG_LEVEL:INFO}
+    org.hibernate.SQL: ${APP_LOG_LEVEL:INFO}
+    com.paysgift.userservice: ${APP_LOG_LEVEL:INFO}
 
 management:
   health:
@@ -41,35 +41,15 @@ spring:
   jackson:
     serialization:
       indent-output: true
-  cloud:
-    consul:
-      config:
-        fail-fast: false # if not in "prod" profile, do not force to use Spring Cloud Config
-        format: yaml
-        profile-separator: '-'
-      discovery:
-        prefer-ip-address: true
-        tags:
-          - profile=${spring.profiles.active}
-          - version='@project.version@'
-          - git-version=${git.commit.id.describe:}
-          - git-commit=${git.commit.id.abbrev:}
-          - git-branch=${git.branch:}
-      host: localhost
-      port: 8500
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/productService?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
-    username: root
-    password:
+    url: jdbc:mysql://${CONTAINER_DB}:3306/${DB_NAME}?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
     hikari:
       poolName: Hikari
       auto-commit: false
-      data-source-properties:
-        cachePrepStmts: true
-        prepStmtCacheSize: 250
-        prepStmtCacheSqlLimit: 2048
-        useServerPrepStmts: true
   elasticsearch:
     uris: http://localhost:9200
   liquibase:
@@ -81,8 +61,8 @@ spring:
     cache: false
 
 server:
-  port: 8082
-  # make sure requests the proxy uri instead of the server one
+  port: ${SERVER_PORT}  # The port your application will run on
+  address: ${SERVER_ADDRESS}  # Listen on all interfaces
   forward-headers-strategy: native
 
 # ===================================================================
@@ -92,13 +72,6 @@ server:
 # ===================================================================
 
 jhipster:
-  cache: # Cache configuration
-    redis: # Redis configuration
-      expiration: 3600 # By default objects stay 1 hour (in seconds) in the cache
-      server: redis://localhost:6379
-      cluster: false
-      # server: redis://localhost:6379,redis://localhost:16379,redis://localhost:26379
-      # cluster: true
   # CORS is disabled by default on microservices, as you should access them through a gateway.
   # If you want to enable it, please uncomment the configuration below.
   # cors:
@@ -112,7 +85,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: MzlhMDk2NGI2ODM5N2NlNDQ2NGQ2YThhZmMxOWVmNDY2MjAwYzA4ZTI3NWI0OGJkNjAwMTZjNjk0YzM3Y2FmZTdhYTI4OWU1M2I3Njc4NWY5ZDQwMWQxYmEwMmE5Yjk1ZmViNjRjN2RiMzhhNDFhNGJkZDVhODBhNDVmYmI3OGI=
+        base64-secret: OTViYTRmZWYwMDllNTUyNTFmZGFlZTU1NTU5NTQ1ZmIzMjBhOTRiYmI2ZTFiNmZhZDFiYjFmOGVkZDRiNTk4NjFhYzBlOTBhOWI4OTViYjFhNzUyZWY4ZDJjMzBjNDg4YmM3YTQyYmE5NzIwMWY1NGJjMGNlN2U5OWQ1Y2IyMzE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000

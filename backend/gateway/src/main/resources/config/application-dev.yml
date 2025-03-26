@@ -59,10 +59,10 @@ spring:
     cache: false
 
 server:
-  server:
-    port: ${SERVER_PORT}  # The port your application will run on
-    address: ${SERVER_ADDRESS}  # Listen on all interfaces
-    forward-headers-strategy: native
+  port: ${SERVER_PORT}  # The port your application will run on
+  address: ${SERVER_ADDRESS}  # Listen on all interfaces
+  forward-headers-strategy: native
+
 
 # ===================================================================
 # JHipster specific properties
@@ -72,7 +72,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'paysgift-apigateway'
+    name: ${APP_NAME}
   gateway:
     rate-limiting:
       enabled: false

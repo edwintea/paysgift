@@ -19,7 +19,7 @@
 spring:
   config:
     activate:
-      on-profile: '!api-docs'
+      on-profile: ${APP_ACTIVE}
 springdoc:
   api-docs:
     enabled: false
@@ -48,7 +48,6 @@ management:
           - loggers
           - prometheus
           - threaddump
-          - caches
           - liquibase
   endpoint:
     health:
@@ -99,38 +98,8 @@ management:
       application: ${spring.application.name}
 
 spring:
-  autoconfigure:
-    exclude: org.springframework.boot.actuate.autoconfigure.metrics.jdbc.DataSourcePoolMetricsAutoConfiguration
   application:
     name: productService
-  cloud:
-    consul:
-      discovery:
-        healthCheckPath: /management/health
-        instanceId: productservice:${spring.application.instance-id:${random.value}}
-        service-name: productservice
-      config:
-        watch:
-          enabled: false
-    function:
-      definition: kafkaConsumer;kafkaProducer
-    stream:
-      kafka:
-        binder:
-          replicationFactor: 1
-          auto-create-topics: true
-          brokers: localhost:9092
-      bindings:
-        binding-out-0:
-          content-type: text/plain
-          group: product-service
-        kafkaConsumer-in-0:
-          destination: sse-topic
-          content-type: text/plain
-          group: product-service
-        kafkaProducer-out-0:
-          content-type: text/plain
-          group: product-service
   docker:
     compose:
       enabled: true

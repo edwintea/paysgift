@@ -18,6 +18,7 @@ services:
 
   userservice-paysgift:
     image: paysgift-userservice
+    container_name: ${CONTAINER_APP}
     build:
       context: .  # Path to the directory containing the Dockerfile
       dockerfile: Dockerfile  # Name of the Dockerfile

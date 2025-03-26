@@ -19,7 +19,7 @@
 spring:
   config:
     activate:
-      on-profile: '!api-docs'
+      on-profile: ${APP_ACTIVE}
 springdoc:
   api-docs:
     enabled: false
@@ -30,7 +30,7 @@ eureka:
     healthcheck:
       enabled: true
     fetch-registry: true
-    register-with-eureka: true
+    register-with-eureka: false
     instance-info-replication-interval-seconds: 10
     registry-fetch-interval-seconds: 10
   instance:
@@ -52,7 +52,7 @@ reactive:
   feign:
     circuit:
       breaker:
-        enabled: true
+        enabled: false
 management:
   endpoints:
     web:
@@ -120,7 +120,7 @@ management:
 
 spring:
   application:
-    name: ${APP_LOG_LEVEL}
+    name: ${APP_NAME}
   cloud:
     gateway:
       default-filters:
@@ -148,10 +148,10 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/api/orders/**
-        - id: cart-service
-          uri: lb://cart-service
+        - id: order-service
+          uri: lb://order-service
           predicates:
-            - Path=/api/carts/**
+            - Path=/api/orders/**
         - id: payment-service
           uri: lb://payment-service
           predicates:
@@ -164,3 +164,7 @@ spring:
           uri: lb://notification-service
           predicates:
             - Path=/api/notifications/**
+        - id: transaction-service
+          uri: lb://transaction-service
+          predicates:
+            - Path=/api/transactions/**

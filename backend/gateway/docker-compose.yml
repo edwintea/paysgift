@@ -1,7 +1,7 @@
 services:
   redis:
     image: redis:latest
-    container_name: redis-paysgift
+    container_name: paysgift-redis
     ports:
       - "6379:6379"
     volumes:
@@ -11,7 +11,7 @@ services:
 
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
-    container_name: zookeeper-paysgift
+    container_name: paysgift-zookeeper
     ports:
       - "22181:2181"
     environment:
@@ -22,7 +22,7 @@ services:
 
   kafka:
     image: confluentinc/cp-kafka:latest
-    container_name: kafka-paysgift
+    container_name: paysgift-kafka
     depends_on:
       - zookeeper
     ports:
@@ -30,7 +30,7 @@ services:
     environment:
       KAFKA_BROKER_ID: 1
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka-paysgift:9092,PLAINTEXT_HOST://kafka-paysgift:29092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://paysgift-kafka:9092,PLAINTEXT_HOST://paysgift-kafka:29092
       KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092,PLAINTEXT_HOST://0.0.0.0:29092
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
@@ -40,6 +40,7 @@ services:
 
   paysgift-apigateway:
     image: paysgift-apigateway
+    container_name: paysgift-apigateway
     build:
       context: .  # Path to the directory containing the Dockerfile
       dockerfile: Dockerfile  # Name of the Dockerfile
@@ -51,7 +52,7 @@ services:
     environment:
       SPRING_REDIS_HOST: redis
       SPRING_REDIS_PORT: 6379
-      SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka-paysgift:29092
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: paysgift-kafka:29092
     networks:
       - paysgift-network
 

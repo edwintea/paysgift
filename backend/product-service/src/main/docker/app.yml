@@ -7,20 +7,15 @@ services:
       - _JAVA_OPTIONS=-Xmx512m -Xms256m
       - SPRING_PROFILES_ACTIVE=prod,api-docs
       - MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED=true
-      - SPRING_CLOUD_CONSUL_HOST=consul
-      - SPRING_CLOUD_CONSUL_PORT=8500
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/productservice?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
       - SPRING_LIQUIBASE_URL=jdbc:mysql://mysql:3306/productservice?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&createDatabaseIfNotExist=true
-      - JHIPSTER_CACHE_REDIS_SERVER=redis://redis:6379
-      - JHIPSTER_CACHE_REDIS_CLUSTER=false
       - SPRING_ELASTICSEARCH_URIS=http://elasticsearch:9200
-      - SPRING_CLOUD_STREAM_KAFKA_BINDER_BROKERS=kafka:9092
     healthcheck:
       test:
         - CMD
         - curl
         - -f
-        - http://localhost:8082/management/health
+        - http://localhost:7006/management/health
       interval: 5s
       timeout: 5s
       retries: 40
@@ -37,19 +32,3 @@ services:
     extends:
       file: ./elasticsearch.yml
       service: elasticsearch
-  redis:
-    extends:
-      file: ./redis.yml
-      service: redis
-  consul:
-    extends:
-      file: ./consul.yml
-      service: consul
-  consul-config-loader:
-    extends:
-      file: ./consul.yml
-      service: consul-config-loader
-  kafka:
-    extends:
-      file: ./kafka.yml
-      service: kafka

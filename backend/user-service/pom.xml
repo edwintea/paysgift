@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.paysgift.userservice</groupId>
-    <artifactId>userservice</artifactId>
+    <artifactId>user-service</artifactId>
     <version>0.0.1</version>
     <packaging>war</packaging>
     <name>User Service</name>

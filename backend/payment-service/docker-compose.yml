@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: ${CONTAINER_DB}
+    ports:
+      - "3313:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - paysgift-network
+
+  orderservice:
+    image: ${CONTAINER_APP}
+    container_name: ${CONTAINER_APP}
+    build:
+      context: .  # Path to the directory containing the Dockerfile
+      dockerfile: Dockerfile  # Name of the Dockerfile
+    depends_on:
+      - mysql
+    ports:
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://${CONTAINER_DB}:3306/${DB_NAME}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${CONTAINER_KAFKA}
+      JWT_SECRET: ${JWT_SECRET}
+      JWT_EXPIRE: ${JWT_EXPIRE}
+      APP_NAME: ${APP_NAME}
+      APP_VERSION: ${APP_VERSION}
+      APP_DESCRIPTION: ${APP_DESCRIPTION}
+      APP_ACTIVE: ${APP_ACTIVE}
+      APP_SERVICE_TIMEOUT: ${APP_SERVICE_TIMEOUT}
+      APP_LOG_LEVEL: ${APP_LOG_LEVEL}
+      SPRING_REDIS_HOST: ${CONTAINER_REDIS}  # Set Redis host for the user service
+      SPRING_REDIS_PORT: 6379  # Set Redis port for the user service
+    networks:
+      - paysgift-network
+
+volumes:
+  mysql-data:
+
+networks:
+  paysgift-network:
+    driver: bridge
