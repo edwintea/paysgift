@@ -12,6 +12,7 @@ RUN npm run build
 # Production stage
 FROM base as production
 ENV NODE_ENV=production
+EXPOSE 5001
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
@@ -20,5 +21,6 @@ CMD ["npm", "start"]
 # Development stage
 FROM base as dev
 ENV NODE_ENV=development
+EXPOSE 5001 
 COPY . .
 CMD ["npm", "run", "dev"]

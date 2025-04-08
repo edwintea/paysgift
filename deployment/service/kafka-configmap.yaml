@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kafka-config
+  namespace: paysgift
+data:
+  server.properties: |
+    # Custom Kafka configurations
+    broker.id=0
+    listeners=PLAINTEXT://0.0.0.0:9092
+    advertised.listeners=PLAINTEXT://kafka:9092
+    log.dirs=/var/lib/kafka/data
+    zookeeper.connect=zookeeper:2181
+    # Additional configurations
+    auto.create.topics.enable=true
+    delete.topic.enable=true
+    num.partitions=1
+    log.retention.hours=168
+    log.segment.bytes=1073741824
+    log.retention.check.interval.ms=300000

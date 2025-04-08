@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: paysgift-apigateway-service
+  namespace: paysgift
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 7000
+  selector:
+    app: paysgift-apigateway-app

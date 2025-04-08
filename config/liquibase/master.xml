@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+    <property name="now" value="now()" dbms="mysql"/>
+    <property name="floatType" value="float" dbms="mysql"/>
+    <property name="clobType" value="clob" dbms="mysql"/>
+    <property name="blobType" value="longblob" dbms="mysql"/>
+    <property name="uuidType" value="varchar(36)" dbms="mysql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql"/>
+    <property name="timeType" value="time(6)" dbms="mysql"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327064325_added_entity_Banner.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327065713_added_entity_Brand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327070618_added_entity_BrandBranch.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327070816_added_entity_BrandCardMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327070957_added_entity_BrandCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072002_added_entity_BrandProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072133_added_entity_BrandSticker.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072342_added_entity_CardMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072544_added_entity_Category.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072748_added_entity_Channel.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327072949_added_entity_ChannelBrand.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327073129_added_entity_ChannelCardMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327073314_added_entity_ChannelCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327073434_added_entity_ChannelOccasion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327073716_added_entity_ChannelProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327073846_added_entity_ChannelSticker.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327074143_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327074301_added_entity_ClientProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327074942_added_entity_SystemConfiguration.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327075231_added_entity_Country.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327080145_added_entity_CountrySend.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327080829_added_entity_CountrySite.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327092939_added_entity_Currency.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327093209_added_entity_CurrencyRate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327093829_added_entity_Customer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327094305_added_entity_CustomerAddress.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327094514_added_entity_CustomerContact.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327094720_added_entity_CustomerLoginActivity.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327094932_added_entity_CustomerNotification.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250327095138_added_entity_CustomerPayment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408022509_added_entity_DiscountProduct.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408042815_added_entity_Faq.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408043120_added_entity_FaqCategory.xml" relativeToChangelogFile="false"/>
+  <!--
+  <include file="config/liquibase/changelog/20250408043530_added_entity_LocationCity.xml" relativeToChangelogFile="false"/>
+  -->
+  <include file="config/liquibase/changelog/20250408045125_added_entity_LocationDistrict.xml" relativeToChangelogFile="false"/>
+
+    <include file="config/liquibase/changelog/20250408045355_added_entity_LocationProvince.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408061032_added_entity_LocationCountry.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408061347_added_entity_LocationVillage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408061618_added_entity_LocationZipcode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408061907_added_entity_MasterGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408062512_added_entity_MasterMenu.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408062645_added_entity_MasterMenuGroup.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408062750_added_entity_MasterMenuUser.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408063021_added_entity_MessagebirdTemplate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408063205_added_entity_Occasion.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408063337_added_entity_Provider.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408063747_added_entity_ProviderPayment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250408063953_added_entity_Sticker.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20250327075231_added_entity_constraints_Country.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>

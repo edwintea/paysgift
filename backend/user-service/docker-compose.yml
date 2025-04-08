@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql:
     image: mysql:8.0
-    container_name: ${CONTAINER_DB}
+    container_name: ${MYSQL_SERVICE}
     ports:
       - "3310:3306"
     environment:
@@ -16,9 +16,9 @@ services:
     networks:
       - paysgift-network
 
-  userservice-paysgift:
-    image: paysgift-userservice
-    container_name: ${CONTAINER_APP}
+  paysgift-userservice:
+    image: ${APP_CONTAINER}
+    container_name: ${APP_CONTAINER}
     build:
       context: .  # Path to the directory containing the Dockerfile
       dockerfile: Dockerfile  # Name of the Dockerfile
@@ -27,10 +27,10 @@ services:
     ports:
       - "${SERVER_PORT}:${SERVER_PORT}"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://${CONTAINER_DB}:3306/${DB_NAME}
+      SPRING_DATASOURCE_URL: jdbc:mysql://${MYSQL_SERVICE}:3306/${DB_NAME}
       SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
-      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${CONTAINER_KAFKA}
+      SPRING_KAFKA_BOOTSTRAP_SERVERS: ${KAFKA_SERVICE}
       JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRE: ${JWT_EXPIRE}
       APP_NAME: ${APP_NAME}

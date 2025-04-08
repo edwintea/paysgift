@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+  <changeSet id="check-banner-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="banner"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-branch-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand_branch"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-card-message-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand_card_message"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-category-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand_category"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-product-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand_product"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-brand-sticker-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="brand_sticker"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-card-message-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="card_message"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-category-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="category"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-brand-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_brand"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-card-message-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_card_message"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-category-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_category"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_occasion"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_product"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="channel_sticker"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="client"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="client_product"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="system_configuration"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="country"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="country_send"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="country_site"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="currency"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="currency_rate"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer_address"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer_contact"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer_login_activity"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer_notification"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="customer_payment"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="discount_product"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="faq"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="faq_category"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_city"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_district"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_province"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_country"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_village"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="location_zipcode"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="master_group"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="master_menu"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="master_menu_group"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="master_menu_user"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="messagebird_template"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="occasion"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="provider"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="provider_payment"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+  <changeSet id="check-channel-occasion-table-existence" author="edwin">
+    <preConditions onFail="MARK_RAN">
+      <not>
+        <tableExists tableName="sticker"/>
+      </not>
+    </preConditions>
+  </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paysgift-apigateway-app
+  namespace: paysgift
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paysgift-apigateway-app
+  template:
+    metadata:
+      labels:
+        app: paysgift-apigateway-app
+    spec:
+      containers:
+        - name: paysgift-apigateway-app
+          image: edwindockertea1/paysgift-apigateway:latest
+          ports:
+            - containerPort: 7000
+          env:
+            - name: APP_NAME
+              value: "Paysgift - ApiGateway"
+            - name: APP_VERSION
+              value: "1.0.0"
+            - name: APP_DESCRIPTION
+              value: "Microservice for Api Gateway."
+            - name: APP_ACTIVE
+              value: "dev"
+            - name: APP_SERVICE_TIMEOUT
+              value: "5000"
+            - name: APP_LOG_LEVEL
+              value: "DEBUG"
+            - name: JWT_SECRET
+              value: "8c9c82c293200f1b635bbb421736e62474a0153357c68bab23efd3cfe23b9516adb4ea5a58e768ea0ed0a17d021e49207b14f7463521daa6cbdcdc2bfe70e900ad8dca9503e9437d956682719d64833b34726bcdd7080f52ff21165e393fd34bdff88b865cd5ad4909013028be147696c0060785ccf547340c711414d35d89e72783c66e9b5dab15b8cfd3afadf925081ef26a9eeffd651413fe92146078c706b7143346d6514d320aa7f37d92fc931abbdc9e1d42b241e9ac3418e57f658ec3fca5728f9e2cff552b9931cd4ca84f09f8cc26e49d00cdf216c84a5a284a01c76312b479bc0690a16795bf73a2290fe5b844569c777d9bb46728c4bd4940b652"
+            - name: JWT_EXPIRE
+              value: "3600"
+            - name: DB_HOST
+              value: 
+            - name: DB_NAME
+              value: 
+            - name: DB_USERNAME
+              value: 
+            - name: DB_PASSWORD
+              value: 
+            - name: SERVER_HOST
+              value: "0.0.0.0"
+            - name: SERVER_PORT
+              value: "7000"
+            - name: APP_SERVICE
+              value: "paysgift-apigateway-app"
+            - name: MYSQL_SERVICE
+              value: "mysql-service"
+            - name: REDIS_SERVICE
+              value: "redis-service"
+            - name: KAFKA_SERVICE
+              value: "kafka-service:29092"
