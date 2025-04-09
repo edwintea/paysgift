@@ -6,7 +6,7 @@ spring:
     name: ${APP_NAME}
   server:
     port: ${SERVER_PORT}
-    address: ${SERVER_HOST}
+    address: ${SERVER_ADDRESS}
     forward-headers-strategy: native
   redis:
     host: ${REDIS_HOST}

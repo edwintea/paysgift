@@ -36,6 +36,19 @@ public class SecurityConfiguration {
                     .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern("/api/admin/**")).hasAuthority(AuthoritiesConstants.ADMIN)
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/send-emails/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/send-emails")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/send-emails")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/send-messages/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/send-messages")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/send-messages")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/send-whats-apps/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/send-whats-apps")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/send-whats-apps")).permitAll()
+
                     .requestMatchers(mvc.pattern("/api/**")).authenticated()
                     .requestMatchers(mvc.pattern("/v3/api-docs/**")).hasAuthority(AuthoritiesConstants.ADMIN)
                     .requestMatchers(mvc.pattern("/management/health")).permitAll()

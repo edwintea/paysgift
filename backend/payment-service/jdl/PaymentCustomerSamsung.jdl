@@ -3,6 +3,8 @@ entity PaymentCustomerSamsung {
   name String,
   email String,
   mobileNumber String,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }

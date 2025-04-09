@@ -1,6 +1,6 @@
 entity PaymentTransactionRetrying {
   paymentTransactionRecurringId Integer required,
-  status Integer required,
+  status String required,
   attemptRetry Integer,
   datetimeRetry Instant,
   datetimeNextRetry Instant,
@@ -8,8 +8,10 @@ entity PaymentTransactionRetrying {
   sendCallbackAttempt Integer required,
   sendEmail Boolean required,
   sendEmailAttempt Integer,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

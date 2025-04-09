@@ -5,9 +5,10 @@ services:
     build:
       context: .  # The current directory as the build context
       dockerfile: Dockerfile  # Specify the Dockerfile if it's not named 'Dockerfile'
+      target: dev
     image: paysgift-web:latest  # Optional: Specify the image name and tag
     ports:
-      - "5000:4000"  # Map host port 5000 to container port 4000
+      - "5000:5000"  # Map host port 5000 to container port 4000
     volumes:
       - .:/app  # Mount the current directory to /app in the container
       - /app/node_modules  # Prevent overwriting node_modules in the container

@@ -1,0 +1,203 @@
+{
+  "annotations": {
+    "changelogDate": "20250409084312"
+  },
+  "clientRootFolder": "transactionService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "transactionId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "transactionSendId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "countryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "brandId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "parentCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "skuCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "descriptionEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tnc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tncEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "howToClaim",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "howToClaimEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "denom",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "buyingPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "buyingPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "priceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "isDelivery",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "isCode",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "voucherLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherPin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherIssuance",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherExpired",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "voucherReference",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorReason",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "retry",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "blibliItemId",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "transactionService",
+  "name": "TransactionProduct",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

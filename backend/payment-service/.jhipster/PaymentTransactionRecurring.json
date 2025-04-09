@@ -1,0 +1,143 @@
+{
+  "annotations": {
+    "changelogDate": "20250409104725"
+  },
+  "clientRootFolder": "paymentService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "paymentProviderId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentListId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentTransactionId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentMethodId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "recurringPlanId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cycleId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "scheduleId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "actionId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "cycle",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "tax",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "paymentCharge",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "datetimePaid",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "totalRetry",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "attemptRetry",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datetimeLastRetry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sendCallback",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendCallbackAttempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "paymentSchedule",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "paymentLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dataObj",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "paymentService",
+  "name": "PaymentTransactionRecurring",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

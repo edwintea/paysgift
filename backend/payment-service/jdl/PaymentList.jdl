@@ -1,6 +1,6 @@
 entity PaymentList {
-  status Integer,
-  type Integer,
+  status String,
+  type String,
   code String required,
   name String,
   paymentProviderId Integer,
@@ -10,8 +10,10 @@ entity PaymentList {
   imageUrl String,
   howToPay TextBlob,
   note TextBlob,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

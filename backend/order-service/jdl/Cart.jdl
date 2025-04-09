@@ -6,9 +6,9 @@ entity Cart {
   brandId Integer required,
   productId Integer required,
   qty Integer required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

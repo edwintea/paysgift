@@ -3,7 +3,7 @@ entity DanaOrder {
   function String,
   reqTime Instant,
   respTime Instant,
-  isActive Instant,
+  isActive Boolean,
   reqMsgId String,
   requestId String,
   orderId String,
@@ -18,6 +18,8 @@ entity DanaOrder {
   expiredDate Instant,
   extendInfo TextBlob,
   sendEmailNotif Instant,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Long,
+  updatedAt Instant,
+  updatedBy Long
 }

@@ -28,8 +28,8 @@ entity Product {
   isDelete Boolean required,
   permalink String required,
   updatedSync TextBlob,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer
 }

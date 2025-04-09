@@ -1,0 +1,60 @@
+{
+  "annotations": {
+    "changelogDate": "20250409091535"
+  },
+  "clientRootFolder": "notificationService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateTimeEntry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateTimeSend",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "responseText",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "messageId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableRelation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableId",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "notificationService",
+  "name": "SendMessage",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

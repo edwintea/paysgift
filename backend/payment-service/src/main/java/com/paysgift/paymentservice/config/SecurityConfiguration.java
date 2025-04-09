@@ -36,6 +36,54 @@ public class SecurityConfiguration {
                     .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern("/api/admin/**")).hasAuthority(AuthoritiesConstants.ADMIN)
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/dana-orders/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/dana-orders")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/dana-orders")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-campaigns/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-campaigns")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-campaigns")).permitAll()
+
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-customer-samsungs/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-customer-samsungs")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-customer-samsungs")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-lists/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-lists")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-lists")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-providers/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-providers")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-providers")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payments/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payments")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payments")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-transaction-campaigns/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-transaction-campaigns")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-transaction-campaigns")).permitAll()
+
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-transaction-recurrings/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-transaction-recurrings")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-transaction-recurrings")).permitAll()
+
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-transactions/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-transactions")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-transactions")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-transaction-retryings/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-transaction-retryings")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-transaction-retryings")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/payment-types/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/payment-types")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/payment-types")).permitAll()
+
                     .requestMatchers(mvc.pattern("/api/**")).authenticated()
                     .requestMatchers(mvc.pattern("/v3/api-docs/**")).hasAuthority(AuthoritiesConstants.ADMIN)
                     .requestMatchers(mvc.pattern("/management/health")).permitAll()

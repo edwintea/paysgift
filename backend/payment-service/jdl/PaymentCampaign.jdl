@@ -3,8 +3,10 @@ entity PaymentCampaign {
   freeMonth Integer required,
   validFrom Instant required,
   validTo Instant required,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

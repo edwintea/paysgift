@@ -1,9 +1,9 @@
 entity TransactionManual {
-  transactionId Integer required,
+  transactionId Long required,
   notes TextBlob,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer
 }
 

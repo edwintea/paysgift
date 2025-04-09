@@ -36,6 +36,32 @@ public class SecurityConfiguration {
                     .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern("/api/admin/**")).hasAuthority(AuthoritiesConstants.ADMIN)
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transaction-downloads/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transaction-downloads")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transaction-downloads")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transaction-logs/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transaction-logs")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transaction-logs")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transaction-manuals/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transaction-manuals")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transaction-manuals")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transaction-products/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transaction-products")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transaction-products")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transactions/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transactions")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transactions")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/transaction-sends/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/transaction-sends")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/transaction-sends")).permitAll()
+
+
                     .requestMatchers(mvc.pattern("/api/**")).authenticated()
                     .requestMatchers(mvc.pattern("/v3/api-docs/**")).hasAuthority(AuthoritiesConstants.ADMIN)
                     .requestMatchers(mvc.pattern("/management/health")).permitAll()

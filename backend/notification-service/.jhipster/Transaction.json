@@ -1,0 +1,184 @@
+{
+  "annotations": {
+    "changelogDate": "20250409072942"
+  },
+  "clientRootFolder": "notificationService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "customerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "countryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "clientId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "channelId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "brandId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "currencyId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "currencyCode",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "currencyRate",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "couponCodeId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "shopbackReference",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invoiceCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productPrice",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "productPriceUsd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "deliveryPrice",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "deliveryPriceUsd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "discProductPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discProductPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discDeliveryPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discDeliveryPriceUsd",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "discCouponPrice",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "discCouponPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "serviceFee",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "serviceFeeUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPayment",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalPaymentUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "paymentNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentQr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentLink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentStatus",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "paymentExpired",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "paymentReferenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paidedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "notificationService",
+  "name": "Transaction",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

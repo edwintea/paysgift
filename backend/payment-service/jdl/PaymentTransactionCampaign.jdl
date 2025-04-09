@@ -3,8 +3,10 @@ entity PaymentTransactionCampaign {
   cycle Integer required,
   hitDatetime Instant required,
   hitStatus Boolean,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

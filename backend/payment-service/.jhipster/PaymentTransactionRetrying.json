@@ -1,0 +1,71 @@
+{
+  "annotations": {
+    "changelogDate": "20250409105009"
+  },
+  "clientRootFolder": "paymentService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "paymentTransactionRecurringId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attemptRetry",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "datetimeRetry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "datetimeNextRetry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sendCallback",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendCallbackAttempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sendEmail",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendEmailAttempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "paymentService",
+  "name": "PaymentTransactionRetrying",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

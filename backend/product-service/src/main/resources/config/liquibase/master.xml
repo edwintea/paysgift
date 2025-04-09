@@ -12,6 +12,17 @@
     <property name="timeType" value="time(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409044349_added_entity_Coupon.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409045924_added_entity_CouponCode.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409050409_added_entity_Discount.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409055929_added_entity_EvoucherDelivery.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409060112_added_entity_PaysgiftPromo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409060514_added_entity_PaysgiftPromoInfo.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409060949_added_entity_Product.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409061054_added_entity_ProductCategory.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409061246_added_entity_ProductFavourite.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409061427_added_entity_ProductImage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409061530_added_entity_ProductOccasion.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

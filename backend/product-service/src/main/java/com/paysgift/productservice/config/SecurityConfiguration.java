@@ -36,6 +36,51 @@ public class SecurityConfiguration {
                     .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/authenticate")).permitAll()
                     .requestMatchers(mvc.pattern("/api/admin/**")).hasAuthority(AuthoritiesConstants.ADMIN)
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/coupons/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/coupons")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/coupons")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/coupon-codes/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/coupon-codes")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/coupon-codes")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/discounts/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/discounts")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/discounts")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/evoucher-deliveries/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/evoucher-deliveries")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/evoucher-deliveries")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/paysgift-promo-infos/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/paysgift-promo-infos")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/paysgift-promo-infos")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/paysgift-promos/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/paysgift-promos")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/paysgift-promos")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/product-categories/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/product-categories")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/product-categories")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/product-favourites/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/product-favourites")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/product-favourites")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/product-images/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/product-images")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/product-images")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/product-occasions/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/product-occasions")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/product-occasions")).permitAll()
+
+                    .requestMatchers(mvc.pattern(HttpMethod.GET, "/api/products/**")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.POST, "/api/products")).permitAll()
+                    .requestMatchers(mvc.pattern(HttpMethod.PUT, "/api/products")).permitAll()
+
                     .requestMatchers(mvc.pattern("/api/**")).authenticated()
                     .requestMatchers(mvc.pattern("/v3/api-docs/**")).hasAuthority(AuthoritiesConstants.ADMIN)
                     .requestMatchers(mvc.pattern("/management/health")).permitAll()

@@ -4,10 +4,10 @@ entity ProductImage {
   channelId Integer required,
   brandId Integer required,
   image String required,
-  priority Integer required,
-  createdOn Instant,
+  priority String required,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

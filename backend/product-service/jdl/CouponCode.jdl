@@ -8,15 +8,15 @@ entity CouponCode {
   count Integer required,
   countRemaining Integer required,
   uniquePerCustomer Boolean required,
-  subtotal TextBlob required,
-  discountType Boolean required,
+  subtotal BigDecimal required,
+  discountType String required,
   discountAmount BigDecimal required,
   discountMaxAmount BigDecimal required,
   isActive Boolean required,
   isDelete Boolean required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

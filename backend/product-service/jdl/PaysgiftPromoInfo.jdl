@@ -1,8 +1,10 @@
-entity PaysgiftPromoDetail {
+entity PaysgiftPromoInfo {
   paysgiftPromoId Integer required,
   voucherId Integer required,
-  createdOn Instant required,
-  updatedOn Instant required
+  createdAt Instant required,
+  createdBy Long,
+  updatedAt Instant required,
+  updatedBy Long
 }
 
 // You can define relationships here if needed

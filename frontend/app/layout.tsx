@@ -13,7 +13,7 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "paysgift",
+  title: "Paysgift:e-commerce",
   description: "your ultimate voucher shop",
 };
 

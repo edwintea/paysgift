@@ -1,0 +1,120 @@
+{
+  "annotations": {
+    "changelogDate": "20250409091338"
+  },
+  "clientRootFolder": "notificationService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "mailTo",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "mailToName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subject",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "body",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "attached1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attachedUnlink1",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attached2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attachedUnlink2",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attached3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "attachedUnlink3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateTimeEntry",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "dateTimeSend",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "mailFrom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "mailFromName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "info",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mailCc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mailCcName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableRelation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "notificationService",
+  "name": "SendEmail",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

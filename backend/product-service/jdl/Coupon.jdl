@@ -6,9 +6,9 @@ entity Coupon {
   tnc TextBlob,
   isActive Boolean required,
   isDelete Boolean required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer
 }
 

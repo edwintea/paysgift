@@ -1,10 +1,10 @@
 entity EvoucherDelivery {
   countryId Integer,
-  type Boolean required,
+  type String required,
   price BigDecimal required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

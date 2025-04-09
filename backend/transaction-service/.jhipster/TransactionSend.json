@@ -1,0 +1,187 @@
+{
+  "annotations": {
+    "changelogDate": "20250409084901"
+  },
+  "clientRootFolder": "transactionService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "transactionId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "pin",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "stickerId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "senderName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sendType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "contactType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recepientName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recepientContact",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "recepientContactHash",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isImmediately",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendSchedule",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "addressLabel",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "countryId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "provinceId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "cityId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "districtId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "villageId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "zipcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "courierNote",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "longitude",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sendBy",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "deliveryPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "deliveryPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discDeliveryPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "discDeliveryPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalDeliveryPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "totalDeliveryPriceUsd",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "statusDelivery",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusReason",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "blibliPackageId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tryOpen",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "transactionService",
+  "name": "TransactionSend",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

@@ -65,10 +65,13 @@ public class PaysgiftApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        // Load the .env file from the classpath
-        Dotenv dotenv = Dotenv.load();
+        // Load the .env file from the specified path
+        Dotenv dotenv = Dotenv.configure()
+            .directory(".") // Set the directory to the current directory
+            .load();
         // Set system properties from the .env file
         dotenv.entries().forEach(entry -> System.setProperty(entry.getKey(), entry.getValue()));
+
 
         SpringApplication app = new SpringApplication(PaysgiftApp.class);
         DefaultProfileUtil.addDefaultProfile(app);

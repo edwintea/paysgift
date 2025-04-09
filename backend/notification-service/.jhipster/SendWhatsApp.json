@@ -1,0 +1,66 @@
+{
+  "annotations": {
+    "changelogDate": "20250409091719"
+  },
+  "clientRootFolder": "notificationService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "countryCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "phoneNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageUrl",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateTimeEntry",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dateTimeSend",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "responseTxt",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "messageId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "statusMessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableRelation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tableId",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "notificationService",
+  "name": "SendWhatsApp",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

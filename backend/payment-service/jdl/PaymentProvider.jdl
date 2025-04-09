@@ -1,6 +1,8 @@
 entity PaymentProvider {
-  status Integer,
+  status Boolean,
   provider String required,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }

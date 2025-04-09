@@ -1,9 +1,9 @@
 entity ProductCategory {
   productId Integer required,
   categoryId Integer required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

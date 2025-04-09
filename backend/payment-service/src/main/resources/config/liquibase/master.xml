@@ -12,6 +12,17 @@
     <property name="timeType" value="time(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409101834_added_entity_DanaOrder.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409102021_added_entity_Payment.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409102204_added_entity_PaymentCampaign.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409102340_added_entity_PaymentCustomerSamsung.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409102631_added_entity_PaymentList.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409102814_added_entity_PaymentProvider.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409103757_added_entity_PaymentTransaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409103935_added_entity_PaymentTransactionCampaign.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409104725_added_entity_PaymentTransactionRecurring.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409105009_added_entity_PaymentTransactionRetrying.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409105140_added_entity_PaymentType.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

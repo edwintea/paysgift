@@ -2,12 +2,12 @@ entity PaymentTransactionRecurring {
   paymentProviderId Integer,
   paymentListId Integer,
   paymentTransactionId Integer,
-  customerId String,
-  paymentMethodId String,
-  recurringPlanId String,
-  cycleId String,
-  scheduleId String,
-  actionId String,
+  customerId Long,
+  paymentMethodId Long,
+  recurringPlanId Long,
+  cycleId Long,
+  scheduleId Long,
+  actionId Long,
   status Boolean,
   cycle Integer,
   amount BigDecimal,
@@ -24,8 +24,10 @@ entity PaymentTransactionRecurring {
   paymentLink String,
   referenceId String,
   dataObj TextBlob,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

@@ -1,5 +1,5 @@
 entity PaymentTransaction {
-  status Integer,
+  status String,
   paymentProviderId Integer required,
   paymentListId Integer,
   orderId Long,
@@ -11,7 +11,7 @@ entity PaymentTransaction {
   tax BigDecimal required,
   paymentCharge BigDecimal,
   total BigDecimal,
-  expiryRequest Integer,
+  expiryRequest Boolean,
   expiryTime Instant,
   expiryLink Instant,
   processExpired Boolean required,
@@ -35,8 +35,10 @@ entity PaymentTransaction {
   sendCallbackAttempt Integer required,
   sendEmail Boolean required,
   sendEmailAttempt Integer,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Integer required,
+  updatedAt Instant,
+  updatedBy Integer required
 }
 
 // You can define relationships here if needed

@@ -2,6 +2,8 @@ entity PaysgiftPromo {
   isActive Boolean required,
   bannerImage String,
   bannerUrl String,
-  createdOn Instant required,
-  updatedOn Instant required
+  createdAt Instant required,
+  createdBy Long,
+  updatedAt Instant required,
+  updatedBy Long
 }

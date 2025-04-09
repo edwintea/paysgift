@@ -1,0 +1,182 @@
+{
+  "annotations": {
+    "changelogDate": "20250409103757"
+  },
+  "clientRootFolder": "paymentService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentProviderId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "paymentListId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "orderId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "orderNo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "invoiceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "referenceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "clientId",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "tax",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "paymentCharge",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "total",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldName": "expiryRequest",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "expiryTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "expiryLink",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldName": "processExpired",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "paymentCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentDeeplink",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "paymentObj",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "notes",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sgiUid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerEmail",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerMobileNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isSubscription",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "totalRecurring",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "retryTotal",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "retryInterval",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cycleActive",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "mode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "modeInterval",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nextPayment",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "sendCallback",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendCallbackAttempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "sendEmail",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "sendEmailAttempt",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "paymentService",
+  "name": "PaymentTransaction",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

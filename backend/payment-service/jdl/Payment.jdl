@@ -7,9 +7,9 @@ entity Payment {
   logo String required,
   isActive Boolean required,
   isDelete Boolean required,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer required,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer required
 }
 

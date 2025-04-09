@@ -1,0 +1,110 @@
+{
+  "annotations": {
+    "changelogDate": "20250409101834"
+  },
+  "clientRootFolder": "paymentService",
+  "databaseType": "sql",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "version",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "functionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reqTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "respTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "reqMsgId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "issuanceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voucherPin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "issuanceDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "expiredDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "extendInfo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sendEmailNotif",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "updatedAt",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "updatedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "microserviceName": "paymentService",
+  "name": "DanaOrder",
+  "pagination": "pagination",
+  "readOnly": true,
+  "relationships": [],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

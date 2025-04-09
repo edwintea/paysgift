@@ -12,6 +12,11 @@
     <property name="timeType" value="time(6)" dbms="mysql"/>
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409072942_added_entity_Transaction.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409073741_added_entity_TransactionDownload.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409091338_added_entity_SendEmail.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409091535_added_entity_SendMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20250409091719_added_entity_SendWhatsApp.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
     <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->

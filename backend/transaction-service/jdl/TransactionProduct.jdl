@@ -1,9 +1,9 @@
 entity TransactionProduct {
   transactionId Integer required,
   transactionSendId Integer required,
-  productId Integer required,
-  countryId Integer required,
-  brandId Integer required,
+  productId Long required,
+  countryId Long required,
+  brandId Long required,
   code String required,
   parentCode String,
   skuCode String,
@@ -40,9 +40,9 @@ entity TransactionProduct {
   errorReason TextBlob,
   retry Boolean required,
   blibliItemId Boolean,
-  createdOn Instant,
+  createdAt Instant,
   createdBy Integer,
-  updatedOn Instant,
+  updatedAt Instant,
   updatedBy Integer
 }
 

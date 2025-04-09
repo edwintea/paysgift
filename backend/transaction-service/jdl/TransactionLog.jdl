@@ -1,9 +1,11 @@
 entity TransactionLog {
-  transactionId Integer required,
+  transactionId Long required,
   title String required,
   info TextBlob required,
-  createdOn Instant,
-  updatedOn Instant
+  createdAt Instant,
+  createdBy Long,
+  updatedAt Instant,
+  updatedBy Long
 }
 
 // You can define relationships here if needed
